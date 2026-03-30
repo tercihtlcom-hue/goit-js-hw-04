@@ -2,17 +2,14 @@ const profile = {
   username: "Jacob",
   playTime: 300,
 
-  // 1. Kullanıcı adını değiştiren metod
   changeUsername(newName) {
     this.username = newName;
   },
 
-  // 2. Oyun süresini artıran metod
   updatePlayTime(hours) {
     this.playTime += hours;
   },
 
-  // 3. Profil bilgilerini özetleyen metod
   getInfo() {
     return `${this.username} has ${this.playTime} active hours!`;
   }
