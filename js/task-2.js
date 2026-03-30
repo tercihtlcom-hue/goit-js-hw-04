@@ -1,23 +1,15 @@
 function calcAverageCalories(days) {
-  // 1. Eğer sporcu hiç veri girmemişse (dizi boşsa) direkt 0 döndür
   if (days.length === 0) {
     return 0;
   }
-
-  // 2. Haftalık toplam kaloriyi biriktirmek için bir değişken
   let totalCalories = 0;
 
-  // 3. Dizideki her bir günü (obje) tek tek gez
   for (const day of days) {
-    // Her objenin içindeki 'calories' özelliğini toplama ekle
     totalCalories += day.calories;
   }
-
-  // 4. Toplam kaloriyi gün sayısına böl ve ortalamayı döndür
   return totalCalories / days.length;
 }
 
-// --- Kontrol Testleri (Fonksiyondan hemen sonra yapıştır) ---
 
 console.log(
   calcAverageCalories([
